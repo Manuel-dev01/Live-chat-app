@@ -1,0 +1,80 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 0 20px 0 20px;
+    padding: 6rem 2rem;
+}
+
+.form div {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.form div input {
+    outline: none;
+    padding: 0.5rem 0.6rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid black
+}
+
+.join {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.join button {
+    background: transparent;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease-out;
+    user-select: none;
+}
+
+.create-btn {
+    background: black;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 7px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    user-select: none;
+}
+
+button:active {
+    transform: scale(0.9);
+}
