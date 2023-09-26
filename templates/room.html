@@ -2,7 +2,7 @@
 {% block content %}
     <div class="message-box">
         <h2>
-            Chat Room: {{room}}
+            Chat Room Code: {{room}}
         </h2>
         <div class="messages" id="messages"></div>
         <div class="inputs">
@@ -13,8 +13,34 @@
     <script type="text/javascript">
         let socketio = io()
 
+        const messages = document.getElementById('messages')
+        const createMessage = (name, msg) => {
+            const content = `
+                <div class="text">
+                   <span>
+                        <strong>${name}</strong> : ${msg}
+                    </span> 
+                    <span class="muted">
+                        ${new Date().toLocaleString()}
+                    </span>
+                </div>
+            `
+            messages.innerHTML += content
+        }
+
+        // We are listening for the message event, the server transmitted a message
+        socketio.on('message', (data) => {
+            createMessage(data.name, data.message)
+        })
         const sendMessage = () => {
-            console.log('send')
+            const message = document.getElementById('message')
+            if (message.value = "") return
+            socketio.emit("message", {data: message.value})
+            message.value = ''
         }        
     </script>
+
+    {% for msg in messages %}
+        
+    {% endfor %}
 {% endblock %}
