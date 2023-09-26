@@ -78,3 +78,51 @@ body {
 button:active {
     transform: scale(0.9);
 }
+
+.message-box {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: stretch;
+}
+
+.messages {
+    overflow-y: scroll;
+    flex: 1;
+    width: 100%;
+}
+
+.inputs {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#message {
+    flex: 1;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.inputs button {
+    padding: 0.5rem 0.9rem;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
