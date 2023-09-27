@@ -78,7 +78,7 @@ def message(data):
     send(content, to=room)
     rooms[room]['messages'].append(content)
     print(f"{session.get('name')} said: {data['data']}")
-
+    print(rooms)
     
 # When we initallize socket io, we are going to connect to the socket associated to the server that the website is on
 # As soon as we connect, there is an event that is admitted to our backend server called connect, the first thing we want to do is listen for that connection event and when the connection event occurs, we want to put the user into the specific room they are going to be in
